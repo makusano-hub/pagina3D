@@ -1,0 +1,1300 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/usuario/ontologies/2026/10/untitled-ontology-30/"
+     xml:base="http://www.semanticweb.org/usuario/ontologies/2026/10/untitled-ontology-30/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:turismo-Magallanes="http://www.Turismito3D.org/onto/turismo-Magallanes#">
+    <owl:Ontology rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#AdministradoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#AdministradoPor"/>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#EsCapital -->
+
+    <owl:ObjectProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#EsCapital">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#PermiteActividadDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#PermiteActividadDe">
+        <owl:inverseOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#seRealizaEn"/>
+        <rdfs:domain rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Lugar"/>
+        <rdfs:range rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#UbicadoEnCiudad -->
+
+    <owl:ObjectProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#UbicadoEnCiudad">
+        <rdfs:range rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Ciudad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#UbicadoEnComuna -->
+
+    <owl:ObjectProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#UbicadoEnComuna">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Ciudad"/>
+                    <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Lugar"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#UbicadoEnProvincia -->
+
+    <owl:ObjectProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#UbicadoEnProvincia">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+                    <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Lugar"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Provincia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#seRealizaEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#seRealizaEn">
+        <rdfs:domain rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+        <rdfs:range rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Lugar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#AccesoMaritimo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#AccesoMaritimo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#AccesoTerrestre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#AccesoTerrestre">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Calificacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Calificacion">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Coordenadas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Coordenadas"/>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Descripcion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#EsIconico -->
+
+    <owl:DatatypeProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#EsIconico">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Nombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Nombre">
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Temporada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Temporada">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#esPagado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#esPagado">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#requiereAvisoPrevioAutoridades -->
+
+    <owl:DatatypeProperty rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#requiereAvisoPrevioAutoridades">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#AtraccionTuristica -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#AtraccionTuristica">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Lugar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Banco -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Banco">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Servicios"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Cafeteria -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Cafeteria">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Servicios"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Camping -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Camping">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#CasasCambio -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#CasasCambio">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Servicios"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Casino -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Casino">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Entretencion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Cementerio -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Cementerio">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#EstablecimientoHistorico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Cine -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Cine">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Entretencion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Ciudad -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Ciudad">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Ubicacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Comida -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Comida">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Ubicacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Cordillera -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Cordillera">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Deporte -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Deporte">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Entretencion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Edificio_Historico -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Edificio_Historico">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Historico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Entretencion -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Entretencion">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Establecimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Establecimiento -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Establecimiento">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Lugar"/>
+        <owl:disjointWith rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#EstablecimientoHistorico -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#EstablecimientoHistorico">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Historico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Estatua -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Estatua">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Monumento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Estrecho -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Estrecho">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Glaciar -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Glaciar">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Historico -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Historico">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#AtraccionTuristica"/>
+        <owl:disjointWith rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Hospital -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Hospital">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Servicios"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Informacion -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Informacion">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Establecimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Isla -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Isla">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Kayak -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Kayak">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Lago -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Lago">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Lugar -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Lugar"/>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Monumento -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Monumento">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Historico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#MonumentoNatural -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#MonumentoNatural">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ZonaProtegidaporLey"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Museo -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Museo">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#AtraccionTuristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Natural -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Natural">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#AtraccionTuristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Navegacion -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Navegacion">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ObservacionFauna -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ObservacionFauna">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ParqueNacional -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ParqueNacional">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ZonaProtegidaporLey"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Pesca -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Pesca">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Provincia -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Provincia">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Ubicacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ReservaNatural -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ReservaNatural">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ZonaProtegidaporLey"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Restaurant -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Restaurant">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Servicios"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Rio -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Rio">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Servicios -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Servicios">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Establecimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Trekking -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Trekking">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Ubicacion -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Ubicacion"/>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#VidaNocturna -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#VidaNocturna">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#VisitaMuseo -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#VisitaMuseo">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ZonaProtegidaporLey -->
+
+    <owl:Class rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ZonaProtegidaporLey">
+        <rdfs:subClassOf rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#AlInmigranteCroata -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#AlInmigranteCroata">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Estatua"/>
+        <turismo-Magallanes:AccesoTerrestre rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:AccesoTerrestre>
+        <turismo-Magallanes:Descripcion xml:lang="es-cl">El Monumento al Inmigrante Croata está emplazado en la plaza Croata, situado en la intersección de Av. Bulnes con Mapuche, en la ciudad de Punta Arenas. Este monumento, erigido a petición de la Municipalidad de Punta Arenas en 1970, fue creado por el escultor Miodrag Živković en colaboración con el ingeniero y arquitecto Djordje Zlokovic, quien aportó en la proyección de los planos estáticos. Este monumento representa a la familia croata alzando sus brazos a su descendencia, en permanente diálogo con sus raíces socioculturales en las costas de Dalmacia. Constituye un homenaje a las familias migrantes croatas que arribaron a la Región de Magallanes desde mediados del siglo XIX y, con fuerza, durante las primeras décadas del siglo XX.</turismo-Magallanes:Descripcion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#AlbertoDeAgostini -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#AlbertoDeAgostini">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ParqueNacional"/>
+        <turismo-Magallanes:AdministradoPor rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#EstadoDeChile"/>
+        <turismo-Magallanes:Descripcion xml:lang="es-cl">Parque Nacional Ubicado en Tierra del Fuego, nombrado en Honor a Misionero Salesiano del Mismo Nombre.</turismo-Magallanes:Descripcion>
+        <turismo-Magallanes:requiereAvisoPrevioAutoridades rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:requiereAvisoPrevioAutoridades>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Apuestas -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Apuestas">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#VidaNocturna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#BaseTorres -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#BaseTorres">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Camping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Blanco -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Blanco">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Lago"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#CaboDeHornos -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#CaboDeHornos">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ParqueNacional"/>
+        <turismo-Magallanes:AdministradoPor rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#EstadoDeChile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#CanalBeagle -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#CanalBeagle">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Estrecho"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#CasinoDreams -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#CasinoDreams">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Casino"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#CementerioAlbertoHurtado -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#CementerioAlbertoHurtado">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Cementerio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#CementerioMunicipalPorvenir -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#CementerioMunicipalPorvenir">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Cementerio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#CementerioMunicipalSaraBraun -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#CementerioMunicipalSaraBraun">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Cementerio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#CineStar -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#CineStar">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Cine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ClinicaMagallanes -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ClinicaMagallanes">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Hospital"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaAntartica -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaAntartica">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaAntartidaChilena"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaCaboDeHornos -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaCaboDeHornos">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaAntartidaChilena"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaLagunaBlanca -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaLagunaBlanca">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaDeMagallanes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaNatales -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaNatales">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaUltimaEsperanza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaPorvenir -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaPorvenir">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaTierraDelFuego"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaPrimavera -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaPrimavera">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaTierraDelFuego"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaPuntaArenas -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaPuntaArenas">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaDeMagallanes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaRioVerde -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaRioVerde">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaDeMagallanes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaSanGregorio -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaSanGregorio">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaDeMagallanes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaTimaukel -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaTimaukel">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaTierraDelFuego"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaTorresDelPaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaTorresDelPaine">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comuna"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaUltimaEsperanza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#CuevaDelMilodon -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#CuevaDelMilodon">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#MonumentoNatural"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Darwin -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Darwin">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Cordillera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Dawson -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Dawson">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Isla"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#EstadoDeChile -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#EstadoDeChile"/>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#EstrechoDeMagallanes -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#EstrechoDeMagallanes">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Estrecho"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#FranciscoColoane -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#FranciscoColoane">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ReservaNatural"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#FrigorificoBories -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#FrigorificoBories">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#EstablecimientoHistorico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#FuerteBulnes -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#FuerteBulnes">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#EstablecimientoHistorico"/>
+        <turismo-Magallanes:AccesoTerrestre rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:AccesoTerrestre>
+        <turismo-Magallanes:Descripcion>Reconstruccion del primer asentamiento de la region de magallanes y del estrecho de magallanes</turismo-Magallanes:Descripcion>
+        <turismo-Magallanes:EsIconico rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:EsIconico>
+        <turismo-Magallanes:Nombre>Parque del Estrecho</turismo-Magallanes:Nombre>
+        <turismo-Magallanes:requiereAvisoPrevioAutoridades rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</turismo-Magallanes:requiereAvisoPrevioAutoridades>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#GimnasioDeLaConfederacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#GimnasioDeLaConfederacion">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Deporte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#GimnasioFiscal -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#GimnasioFiscal">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Deporte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Grey -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Grey">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Glaciar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#HernandoDeMagallanes -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#HernandoDeMagallanes">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Estatua"/>
+        <turismo-Magallanes:AccesoTerrestre rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:AccesoTerrestre>
+        <turismo-Magallanes:Nombre xml:lang="es-cl">Monumento a Hernando de Magallanes</turismo-Magallanes:Nombre>
+        <turismo-Magallanes:esPagado rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</turismo-Magallanes:esPagado>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#HospitalRegional -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#HospitalRegional">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Hospital"/>
+        <turismo-Magallanes:Nombre xml:lang="es-cl">Hospital Clínico de Magallanes</turismo-Magallanes:Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Kawesqar -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Kawesqar">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ParqueNacional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#KayakEnElEstrecho -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#KayakEnElEstrecho">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Kayak"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#LagunaDeLosCisnes -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#LagunaDeLosCisnes">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#MonumentoNatural"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#LagunaParrillar -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#LagunaParrillar">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ReservaNatural"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Magdalena -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Magdalena">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Isla"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#MagdalenaPinguinos -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#MagdalenaPinguinos">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ObservacionFauna"/>
+        <turismo-Magallanes:Descripcion>Colonia grande de pinguinos de Magallanes ubicada en una isla cercana a Punta Arenas</turismo-Magallanes:Descripcion>
+        <turismo-Magallanes:Nombre>Monumento Natural Pinguinos</turismo-Magallanes:Nombre>
+        <turismo-Magallanes:esPagado rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:esPagado>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#MonumentoDelRecuerdo -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#MonumentoDelRecuerdo">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Monumento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#MonumentoNaturalPinguinos -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#MonumentoNaturalPinguinos">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#MonumentoNatural"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#MuseoIndustrialPuertoBories -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#MuseoIndustrialPuertoBories">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Monumento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#MuseoRegionalMagallanes -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#MuseoRegionalMagallanes">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Museo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#NaoVictoria -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#NaoVictoria">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Museo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#OficinaDeInformacionPlazaPUQ -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#OficinaDeInformacionPlazaPUQ">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Informacion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Ovejero -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Ovejero">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Estatua"/>
+        <turismo-Magallanes:UbicadoEnCiudad rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#PuntaArenas"/>
+        <turismo-Magallanes:Coordenadas>-53.16298, -70.90792</turismo-Magallanes:Coordenadas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#PalacioDeLaGobernacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#PalacioDeLaGobernacion">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Edificio_Historico"/>
+        <turismo-Magallanes:UbicadoEnCiudad rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#PuntaArenas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#PalacioSaraBraun -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#PalacioSaraBraun">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Edificio_Historico"/>
+        <turismo-Magallanes:UbicadoEnCiudad rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#PuntaArenas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#PaliAike -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#PaliAike">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ParqueNacional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ParticularoPrivado -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ParticularoPrivado"/>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#PaseoEstrecho -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#PaseoEstrecho">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Navegacion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#PinguinoRey -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#PinguinoRey">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ReservaNatural"/>
+        <turismo-Magallanes:AccesoTerrestre rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:AccesoTerrestre>
+        <turismo-Magallanes:Descripcion>Colonia donde es posible ver al pinguino rey anidando con sus polluelos</turismo-Magallanes:Descripcion>
+        <turismo-Magallanes:Temporada rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:Temporada>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#PioXI -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#PioXI">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Glaciar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Pizza">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comida"/>
+        <turismo-Magallanes:Descripcion>Comida</turismo-Magallanes:Descripcion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Porvenir -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Porvenir">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Ciudad"/>
+        <turismo-Magallanes:EsCapital rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaPorvenir"/>
+        <turismo-Magallanes:EsCapital rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaTierraDelFuego"/>
+        <turismo-Magallanes:UbicadoEnComuna rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaPorvenir"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ProbarChoripanMagallanico -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ProbarChoripanMagallanico">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaAntartidaChilena -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaAntartidaChilena">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Provincia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaDeMagallanes -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaDeMagallanes">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Provincia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaTierraDelFuego -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaTierraDelFuego">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Provincia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaUltimaEsperanza -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaUltimaEsperanza">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Provincia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#PuertoNatales -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#PuertoNatales">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Ciudad"/>
+        <turismo-Magallanes:EsCapital rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaNatales"/>
+        <turismo-Magallanes:EsCapital rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaUltimaEsperanza"/>
+        <turismo-Magallanes:UbicadoEnComuna rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaNatales"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#PuertoWilliams -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#PuertoWilliams">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Ciudad"/>
+        <turismo-Magallanes:EsCapital rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaCaboDeHornos"/>
+        <turismo-Magallanes:EsCapital rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaAntartidaChilena"/>
+        <turismo-Magallanes:UbicadoEnComuna rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaCaboDeHornos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#PuntaArenas -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#PuntaArenas">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Ciudad"/>
+        <turismo-Magallanes:EsCapital rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaPuntaArenas"/>
+        <turismo-Magallanes:EsCapital rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaDeMagallanes"/>
+        <turismo-Magallanes:UbicadoEnComuna rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaPuntaArenas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Riesco -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Riesco">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Isla"/>
+        <turismo-Magallanes:UbicadoEnComuna rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaRioVerde"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#SalaEstrella -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#SalaEstrella">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Cine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#SanJuan -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#SanJuan">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Rio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Sarmiento -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Sarmiento">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Lago"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Senderismo -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Senderismo">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Trekking"/>
+        <turismo-Magallanes:seRealizaEn rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#BaseTorres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#TierraDelFuego -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#TierraDelFuego">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Isla"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaTierraDelFuego"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Toro -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Toro">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Lago"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#TorresDelPaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#TorresDelPaine">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ParqueNacional"/>
+        <turismo-Magallanes:PermiteActividadDe rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#trekkingTorres"/>
+        <turismo-Magallanes:UbicadoEnComuna rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ComunaTorresDelPaine"/>
+        <turismo-Magallanes:UbicadoEnProvincia rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ProvinciaUltimaEsperanza"/>
+        <turismo-Magallanes:AccesoTerrestre rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:AccesoTerrestre>
+        <turismo-Magallanes:Calificacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.8</turismo-Magallanes:Calificacion>
+        <turismo-Magallanes:Descripcion>El Parque Nacional Torres del Paine, en la región de la Patagonia de Chile, es conocido por sus altas montañas, los témpanos de azul brillante que se aferran a los glaciares y las pampas doradas (praderas) que albergan fauna poco común, como los guanacos. Algunos de los sitios más icónicos son las 3 torres de granito que le dan nombre al parque y las cimas con forma de cuernos llamadas Cuernos del Paine</turismo-Magallanes:Descripcion>
+        <turismo-Magallanes:EsIconico rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:EsIconico>
+        <turismo-Magallanes:Nombre>Torres Del Paine</turismo-Magallanes:Nombre>
+        <turismo-Magallanes:esPagado rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:esPagado>
+        <turismo-Magallanes:requiereAvisoPrevioAutoridades rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turismo-Magallanes:requiereAvisoPrevioAutoridades>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#Yendegaia -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Yendegaia">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#ParqueNacional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#maggiorino_borgatello -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#maggiorino_borgatello">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Museo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.Turismito3D.org/onto/turismo-Magallanes#trekkingTorres -->
+
+    <owl:NamedIndividual rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#trekkingTorres">
+        <rdf:type rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#Trekking"/>
+        <turismo-Magallanes:seRealizaEn rdf:resource="http://www.Turismito3D.org/onto/turismo-Magallanes#TorresDelPaine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Actividad"/>
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Lugar"/>
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Ubicacion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Cordillera"/>
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Estrecho"/>
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Glaciar"/>
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Isla"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Establecimiento"/>
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Isla"/>
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Lago"/>
+            <rdf:Description rdf:about="http://www.Turismito3D.org/onto/turismo-Magallanes#Rio"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
